@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import type { InsiderTrade } from '@/types/insider';
 import type { InstitutionHolding } from '@/types/institution';
 import { formatCurrency, formatDate, formatPercent, truncate } from '@/lib/utils';
+import ChartPanel from '@/components/ChartPanel';
 
 // Mock data import — will be replaced with real data later
 import insiderTradesRaw from '@/data/insider-trades.json';
@@ -337,6 +338,11 @@ export default function DashboardPage() {
                   <div><span style={{ color: '#555' }}>FILED</span><br />
                     <span style={{ color: '#888' }}>{selectedInsider.filing_date}</span></div>
                 </div>
+                {/* Price chart for the traded ticker */}
+                <div style={{ fontSize: 9, color: '#555', marginBottom: 4, textTransform: 'uppercase' }}>
+                  {selectedInsider.target_ticker} PRICE CHART (90D)
+                </div>
+                <ChartPanel ticker={selectedInsider.target_ticker} />
                 {/* Filtered trades by same insider */}
                 <div style={{ fontSize: 9, color: '#555', marginBottom: 4, textTransform: 'uppercase' }}>
                   ALL TRADES BY {selectedInsider.insider_name.split(' ').pop()}

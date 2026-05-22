@@ -9,6 +9,7 @@
 | Date | Tasks | Status |
 |------|-------|--------|
 | 2026-05-22 | Phase 0-1 + Deploy | ✅ Complete |
+| 2026-05-22 | Phase 1.6: ChartPanel | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -33,7 +34,7 @@
 - [x] Keyboard navigation (1-4 switch quadrants, ESC clear, / search)
 - [x] Ticker tape header animation
 - [x] Search bar (ticker/insider/company)
-- [ ] Task 1.6: Q4 ChartPanel with Lightweight Charts
+- [x] Task 1.6: Q2 ChartPanel with Lightweight Charts (candlestick + volume, 90-day mock data)
 
 ## Deployment ✅
 - [x] GitHub repo: https://github.com/james0015-pro/neixian
@@ -53,7 +54,7 @@
 - **Styling**: Pure Bloomberg terminal (#000 bg, #ff8c00 amber, JetBrains Mono, inline styles)
 
 ## Next Up (Priority Order)
-1. Phase 1.6: Lightweight Charts in Q2 (price/volume chart when insider selected)
-2. Phase 2.1: Python scraper for SEC EDGAR Form 4 data
-3. Phase 3.1: Finviz-style filter bar
-4. Phase 3.2: Password gate for beta access
+1. Phase 2.1: Python scraper for SEC EDGAR Form 4 data
+2. Phase 2.2: Replace mock data with real scraped data
+3. Phase 1.7: Insider history timeline in Q2 (expand trade list)
+4. Phase 3.1: Finviz-style filter bar
