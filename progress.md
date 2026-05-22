@@ -2,12 +2,13 @@
 
 > 彭博風 + Finviz 篩選器混合風格的內部人交易追蹤儀表板
 > React 19 + Vite + TypeScript + Tailwind v3 + Lightweight Charts + HashRouter
+> **Live:** https://james0015-pro.github.io/neixian/
 
 ## Session Log
 
 | Date | Tasks | Status |
 |------|-------|--------|
-| 2026-05-22 | Phase 0: Scaffold + Phase 1.1-1.4 | ✅ Complete |
+| 2026-05-22 | Phase 0-1 + Deploy | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -25,20 +26,34 @@
 ## Phase 1: Dashboard ✅
 - [x] Task 1.1: DashboardPage 4-quadrant Bloomberg layout
 - [x] Task 1.2: Data type definitions (insider.ts, institution.ts)
-- [x] Task 1.3: InsiderTradesTable with sortable columns + filter
-- [x] Task 1.4: InstitutionRanking table
+- [x] Task 1.3: InsiderTradesTable with sortable columns + BUY/SELL filter
+- [x] Task 1.4: InstitutionRanking table with sortable columns
+- [x] Task 1.5: Q2 Detail panel (click insider or institution row)
+- [x] Q4 Summary stats panel (total trades, buys/sells, net flow, uniques)
+- [x] Keyboard navigation (1-4 switch quadrants, ESC clear, / search)
+- [x] Ticker tape header animation
+- [x] Search bar (ticker/insider/company)
+- [ ] Task 1.6: Q4 ChartPanel with Lightweight Charts
 
-## Phase 2: Data Layer
-- [ ] Task 2.1: Scraper scripts (Python)
+## Deployment ✅
+- [x] GitHub repo: https://github.com/james0015-pro/neixian
+- [x] GitHub Pages: https://james0015-pro.github.io/neixian/
+- [x] gh-pages branch with built dist
+- [x] Pages source set to gh-pages branch (root)
+
+## Phase 2: Data Layer 🚧
+- [ ] Task 2.1: Python scraper scripts (SEC EDGAR + Finviz)
 - [ ] Task 2.2: Real data samples (currently 25 mock trades + 15 holdings)
 
 ## Current State
+- **Live URL**: https://james0015-pro.github.io/neixian/
 - **Mock data**: 25 insider trades, 15 institution holdings
 - **Quadrants**: Q1=Insider table, Q2=Detail panel, Q3=Institution rankings, Q4=Summary stats
 - **Features**: Sortable columns, BUY/SELL filter, search, keyboard nav (1-4, ESC, /)
 - **Styling**: Pure Bloomberg terminal (#000 bg, #ff8c00 amber, JetBrains Mono, inline styles)
 
-## Next Up
-- Phase 1.5: Q2 Detail panel enhancements (click row to show full detail)
-- Phase 1.6: Q4 Chart (Lightweight Charts)
-- Phase 2: Real data scraping
+## Next Up (Priority Order)
+1. Phase 1.6: Lightweight Charts in Q2 (price/volume chart when insider selected)
+2. Phase 2.1: Python scraper for SEC EDGAR Form 4 data
+3. Phase 3.1: Finviz-style filter bar
+4. Phase 3.2: Password gate for beta access
