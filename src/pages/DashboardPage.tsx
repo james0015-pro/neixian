@@ -112,7 +112,7 @@ export default function DashboardPage() {
       return insiderSort.dir === 'asc' ? cmp : -cmp;
     });
     return trades;
-  }, [ALL_TRADES, insiderFilter, search, insiderSort]);
+  }, [insiderFilter, search, insiderSort]);
 
   // Sort institution holdings
   const sortedHoldings = useMemo(() => {
@@ -130,13 +130,13 @@ export default function DashboardPage() {
       return instSort.dir === 'asc' ? cmp : -cmp;
     });
     return holdings;
-  }, [ALL_HOLDINGS, search, instSort]);
+  }, [search, instSort]);
 
   // Ticker tape (unique tickers)
   const tickers = useMemo(() => {
     const set = new Set(ALL_TRADES.map(t => t.target_ticker));
     return [...set].sort();
-  }, [ALL_TRADES]);
+  }, []);
 
   // Keyboard nav
   useEffect(() => {
