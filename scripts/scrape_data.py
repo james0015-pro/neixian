@@ -109,6 +109,8 @@ def scrape_sec_edgar_insider(ticker: str, limit: int = 10) -> list[dict]:
     if not cik:
         return []
 
+    company_cik = cik.lstrip('0')  # e.g., '1045810' for NVDA (no leading zeros for URL)
+
     # Step 1: Get recent Form 4 filings from submissions API
     submissions_url = f"https://data.sec.gov/submissions/CIK{int(cik):010d}.json"
     try:
@@ -146,10 +148,10 @@ def scrape_sec_edgar_insider(ticker: str, limit: int = 10) -> list[dict]:
             accession = accession_numbers[i]
             filing_date = filing_dates[i]
 
-            # Step 2: Build raw .txt URL (insider's CIK from accession)
-            insider_cik = accession.split('-')[0].lstrip('0')
+            # Step 2: Build raw .txt URL (COMPANY CIK, NOT insider CIK!)
+            # SEC stores filings under issuer (company) directory, not insider
             acc_no_dash = accession.replace('-', '')
-            txt_url = f"https://www.sec.gov/Archives/edgar/data/{insider_cik}/{acc_no_dash}/{accession}.txt"
+            txt_url = f"https://www.sec.gov/Archives/edgar/data/{company_cik}/{acc_no_dash}/{accession}.txt"
 
             # Step 3: Fetch raw filing and parse XML
             parsed = _parse_sec_filing(txt_url, ticker, filing_date)
@@ -194,7 +196,7 @@ def _parse_sec_filing(txt_url: str, ticker: str, filing_date: str) -> list[dict]
 
         # Parse non-derivative transactions
         trades = []
-        nd_blocks = re.findall(r'<nonderivativetransaction>(.*?)</nonderivativetransaction>', xml, re.DOTALL)
+        nd_blocks = re.findall(r'<nonDerivativeTransaction>(.*?)</nonDerivativeTransaction>', xml, re.DOTALL | re.IGNORECASE)
         for nd in nd_blocks:
             code = _tag(nd, 'transactioncode')
             if not code:

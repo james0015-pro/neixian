@@ -1,9 +1,20 @@
 {
-  "generated_at": "2026-05-22T15:25:18.942320",
+  "generated_at": "2026-05-22T21:18:53.186790",
   "tickers_scraped": 20,
-  "total_trades": 60,
-  "frontend_total": 67,
-  "buys": 23,
-  "sells": 37,
-  "new_trades_added": 60
+  "sources": {
+    "finviz": {"status": "ok", "holdings": 20},
+    "sec_edgar": {"status": "ok", "trades": 100, "buys": 44, "sells": 56},
+    "openinsider": {"status": "skipped", "reason": "tbody empty (JS-rendered, no browser)"},
+    "camofox": {"status": "skipped", "reason": "libgtk-3.so.0 missing"}
+  },
+  "total_trades": 100,
+  "frontend_total": 87,
+  "buys": 44,
+  "sells": 56,
+  "data_files": {
+    "data/institution_holdings.json": "10.6 KB (20 holdings)",
+    "data/insider_trades.json": "58.1 KB (100 trades)",
+    "data/stock_snapshots.json": "13.7 KB (20 snapshots)",
+    "src/data/insider-trades.json": "37.3 KB (87 merged entries)"
+  }
 }
