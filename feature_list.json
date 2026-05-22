@@ -61,7 +61,7 @@
       "id": "F009",
       "name": "Insider history timeline in Q2",
       "phase": 1,
-      "status": "pending",
+      "status": "completed",
       "file": "src/pages/DashboardPage.tsx"
     },
     {
@@ -82,7 +82,7 @@
       "id": "F012",
       "name": "GitHub Pages deploy",
       "phase": 4,
-      "status": "pending",
+      "status": "completed",
       "file": "vite.config.ts"
     },
     {

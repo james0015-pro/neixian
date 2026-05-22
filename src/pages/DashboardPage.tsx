@@ -78,6 +78,165 @@ function RCell({ w, c, b, onClick, children }: {
   );
 }
 
+// ─── Insider Timeline (Q2 detail) ──────────────────────────────
+
+function InsiderTimeline({ insiderName }: { insiderName: string }) {
+  const allTrades = ALL_TRADES
+    .filter(t => t.insider_name === insiderName)
+    .sort((a, b) => b.transaction_date.localeCompare(a.transaction_date));
+
+  if (allTrades.length === 0) {
+    return <div style={{ color: '#555', fontSize: 10, fontStyle: 'italic' }}>No trade history found.</div>;
+  }
+
+  // Summary stats
+  const buys = allTrades.filter(t => t.transaction_type === 'BUY');
+  const sells = allTrades.filter(t => t.transaction_type === 'SELL');
+  const totalBuyVal = buys.reduce((s, t) => s + t.total_value, 0);
+  const totalSellVal = sells.reduce((s, t) => s + t.total_value, 0);
+  const netVal = totalBuyVal - totalSellVal;
+  const dateFirst = allTrades[allTrades.length - 1].transaction_date.slice(0, 10);
+  const dateLast = allTrades[0].transaction_date.slice(0, 10);
+
+  // Group by ticker
+  const groups = new Map<string, InsiderTrade[]>();
+  for (const t of allTrades) {
+    const key = t.target_ticker;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(t);
+  }
+
+  const tickerLabel = (ticker: string) => {
+    const sample = allTrades.find(t => t.target_ticker === ticker);
+    return sample ? `${ticker} — ${truncate(sample.target_company, 18)}` : ticker;
+  };
+
+  return (
+    <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: 10 }}>
+      {/* Section header */}
+      <div style={{
+        fontSize: 9, color: '#555', marginBottom: 6,
+        textTransform: 'uppercase', letterSpacing: 1,
+        borderBottom: '1px solid #1f1f1f', paddingBottom: 4,
+      }}>
+        INSIDER HISTORY
+      </div>
+
+      {/* Summary bar */}
+      <div style={{
+        display: 'flex', gap: 12, flexWrap: 'wrap',
+        marginBottom: 8, padding: '4px 6px',
+        background: '#0a0a0a', border: '1px solid #1f1f1f',
+        borderRadius: 2,
+      }}>
+        <span style={{ color: '#888' }}>
+          <span style={{ color: '#e6e6e6', fontWeight: 600 }}>{allTrades.length}</span> trades
+        </span>
+        <span style={{ color: '#888' }}>
+          <span style={{ color: '#0c6' }}>{buys.length}B</span>·
+          <span style={{ color: '#f33' }}>{sells.length}S</span>
+        </span>
+        <span style={{ color: '#888' }}>
+          NET <span style={{
+            color: netVal >= 0 ? '#0c6' : '#f33', fontWeight: 600,
+          }}>{formatCurrency(Math.abs(netVal))}</span>
+        </span>
+        <span style={{ color: '#555', fontSize: 9 }}>
+          {dateFirst} → {dateLast}
+        </span>
+      </div>
+
+      {/* Ticker groups */}
+      {[...groups.entries()].map(([ticker, trades]) => {
+        const gBuys = trades.filter(t => t.transaction_type === 'BUY');
+        const gSells = trades.filter(t => t.transaction_type === 'SELL');
+        const gNet = gBuys.reduce((s, t) => s + t.total_value, 0) -
+                      gSells.reduce((s, t) => s + t.total_value, 0);
+
+        return (
+          <div key={ticker} style={{ marginBottom: 8 }}>
+            {/* Ticker group header */}
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              padding: '3px 6px', marginBottom: 2,
+              background: 'rgba(255,140,0,0.06)',
+              borderLeft: '2px solid #ff8c00',
+            }}>
+              <span style={{ color: '#ff8c00', fontWeight: 700, fontSize: 10 }}>
+                {ticker}
+              </span>
+              <span style={{ color: '#888', fontSize: 9 }}>
+                {tickerLabel(ticker)}
+              </span>
+              <span style={{ marginLeft: 'auto', color: '#555', fontSize: 8 }}>
+                {trades.length} trade{trades.length > 1 ? 's' : ''}
+                {' — '}
+                <span style={{ color: '#0c6' }}>{gBuys.length}B</span>/
+                <span style={{ color: '#f33' }}>{gSells.length}S</span>
+                {' — NET '}
+                <span style={{
+                  color: gNet >= 0 ? '#0c6' : '#f33', fontWeight: 600,
+                }}>{formatCurrency(Math.abs(gNet))}</span>
+              </span>
+            </div>
+
+            {/* Trade rows */}
+            {trades.map((t, i) => {
+              const isBuy = t.transaction_type === 'BUY';
+              return (
+                <div key={t.id} style={{
+                  display: 'flex', alignItems: 'center', gap: 6,
+                  padding: '2px 6px', height: 20,
+                  borderBottom: '1px solid rgba(255,255,255,0.03)',
+                  background: i % 2 === 0 ? 'rgba(255,255,255,0.015)' : 'transparent',
+                }}>
+                  {/* Date */}
+                  <span style={{ width: 50, color: '#888', fontSize: 9, flexShrink: 0 }}>
+                    {t.transaction_date.slice(5, 10)}
+                  </span>
+                  {/* Direction badge */}
+                  <span style={{
+                    width: 26, textAlign: 'center', flexShrink: 0,
+                    fontSize: 8, fontWeight: 700,
+                    color: isBuy ? '#0c6' : '#f33',
+                    border: `1px solid ${isBuy ? '#0c6' : '#f33'}44`,
+                    borderRadius: 2, padding: '1px 3px',
+                  }}>
+                    {isBuy ? 'B' : 'S'}
+                  </span>
+                  {/* Value */}
+                  <span style={{
+                    width: 60, textAlign: 'right', flexShrink: 0,
+                    color: isBuy ? '#0c6' : '#f33', fontWeight: 600,
+                  }}>
+                    {formatCurrency(t.total_value)}
+                  </span>
+                  {/* Shares */}
+                  <span style={{ width: 52, textAlign: 'right', color: '#e6e6e6', fontSize: 9, flexShrink: 0 }}>
+                    {t.shares.toLocaleString()} sh
+                  </span>
+                  {/* Price */}
+                  <span style={{ width: 56, textAlign: 'right', color: '#888', fontSize: 9, flexShrink: 0 }}>
+                    @${t.price_per_share.toFixed(0)}
+                  </span>
+                  {/* Held after */}
+                  <span style={{ width: 58, textAlign: 'right', color: '#555', fontSize: 8, flexShrink: 0 }}>
+                    held {t.shares_held_after.toLocaleString()}
+                  </span>
+                  {/* Filing */}
+                  <span style={{ color: '#555', fontSize: 8, flexShrink: 0 }}>
+                    filed {t.filing_date.slice(5, 10)}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── Main Dashboard ───────────────────────────────────────────
 
 export default function DashboardPage() {
@@ -343,27 +502,7 @@ export default function DashboardPage() {
                   {selectedInsider.target_ticker} PRICE CHART (90D)
                 </div>
                 <ChartPanel ticker={selectedInsider.target_ticker} />
-                {/* Filtered trades by same insider */}
-                <div style={{ fontSize: 9, color: '#555', marginBottom: 4, textTransform: 'uppercase' }}>
-                  ALL TRADES BY {selectedInsider.insider_name.split(' ').pop()}
-                </div>
-                {ALL_TRADES
-                  .filter(t => t.insider_name === selectedInsider.insider_name)
-                  .slice(0, 10)
-                  .map((t, i) => (
-                    <div key={i} style={{
-                      display: 'flex', gap: 8, padding: '2px 0',
-                      borderBottom: '1px solid rgba(255,255,255,0.03)',
-                      fontSize: 10,
-                    }}>
-                      <span style={{ width: 55, color: '#888' }}>{t.transaction_date?.slice(0, 10)}</span>
-                      <span style={{ width: 55, color: '#ff8c00' }}>{t.target_ticker}</span>
-                      <span style={{ width: 35, color: t.transaction_type === 'BUY' ? '#0c6' : '#f33', fontWeight: 600 }}>
-                        {t.transaction_type === 'BUY' ? 'BUY' : 'SEL'}
-                      </span>
-                      <span style={{ color: '#e6e6e6' }}>{formatCurrency(t.total_value)}</span>
-                    </div>
-                  ))}
+                <InsiderTimeline insiderName={selectedInsider.insider_name} />
               </div>
             ) : selectedInstitution ? (
               <div style={{ fontSize: 11, fontFamily: 'JetBrains Mono, monospace' }}>
