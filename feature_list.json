@@ -68,17 +68,17 @@
       "id": "F010",
       "name": "Python scraper scripts",
       "phase": 2,
-      "status": "in_progress",
-      "file": "scripts/scrape-insider.py",
-      "note": "Scraper scripts created (scripts/scrape_data.py). Data pipeline running via cron."
+      "status": "completed",
+      "file": "scripts/scrape_sec.py",
+      "note": "Zero-dependency SEC EDGAR scraper using Python stdlib (urllib). Fixed CIK URL bug (company CIK, not insider CIK). Added IGNORECASE regex for camelCase XML tags. Handles both non-derivative and derivative transactions. Successfully scraped 60 real trades across all 20 tickers."
     },
     {
       "id": "F011",
       "name": "Real SEC EDGAR data",
       "phase": 2,
-      "status": "in_progress",
-      "file": "src/data/",
-      "note": "Initial data loaded (200+ inst holdings, 90+ insider trades). Real SEC EDGAR data pending rate-limit resolution."
+      "status": "completed",
+      "file": "src/data/insider-trades.json",
+      "note": "60 real SEC EDGAR Form 4 trades (23 buys, 37 sells) merged with existing mock data. 67 total entries. Data from May 2026 filings: Amy Coleman (MSFT), Mark Stevens (NVDA), Philipp Schindler (GOOGL), Matthew Garman (AMZN), etc."
     },
     {
       "id": "F012",

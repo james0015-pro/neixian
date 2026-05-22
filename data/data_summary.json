@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-05-22T12:58:15.627068",
-  "data_files": {
-    "institution_holdings.json": 200,
-    "stock_snapshots.json": 20,
-    "insider_trades.json": 210
-  },
-  "tickers_covered": 20,
-  "scrape_method": "Scrapling (Fetcher.get with stealthy_headers) — Camofox server unavailable (GTK3 missing on headless server)"
+  "generated_at": "2026-05-22T15:25:18.942320",
+  "tickers_scraped": 20,
+  "total_trades": 60,
+  "frontend_total": 67,
+  "buys": 23,
+  "sells": 37,
+  "new_trades_added": 60
 }
