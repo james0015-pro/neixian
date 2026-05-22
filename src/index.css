@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bl-bg:            #000000;
+  --bl-bg-panel:      #0a0a0a;
+  --bl-bg-row:        #0d0d0d;
+  --bl-bg-hover:      #1a1a1a;
+  --bl-border:        #1f1f1f;
+  --bl-amber:         #ff8c00;
+  --bl-amber-dim:     #b36800;
+  --bl-amber-bright:  #ffaa33;
+  --bl-green:         #00cc66;
+  --bl-green-dim:     #008844;
+  --bl-red:           #ff3333;
+  --bl-red-dim:       #aa2222;
+  --bl-white:         #e6e6e6;
+  --bl-gray:          #888888;
+  --bl-gray-dim:      #555555;
+  --bl-gray-dark:     #333333;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: #000;
+  color: #e6e6e6;
+  margin: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

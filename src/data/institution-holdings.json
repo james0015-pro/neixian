@@ -1,0 +1,167 @@
+[
+  {
+    "id": "i1",
+    "institution_name": "Vanguard Group",
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corp",
+    "shares_held": 850000000,
+    "market_value": 194225000000,
+    "change_qoq": 3.2,
+    "portfolio_weight": 4.8,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i2",
+    "institution_name": "BlackRock Inc.",
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corp",
+    "shares_held": 720000000,
+    "market_value": 164520000000,
+    "change_qoq": 5.1,
+    "portfolio_weight": 4.2,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i3",
+    "institution_name": "Vanguard Group",
+    "ticker": "AAPL",
+    "company_name": "Apple Inc.",
+    "shares_held": 1500000000,
+    "market_value": 372000000000,
+    "change_qoq": -1.5,
+    "portfolio_weight": 9.2,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i4",
+    "institution_name": "BlackRock Inc.",
+    "ticker": "MSFT",
+    "company_name": "Microsoft Corp",
+    "shares_held": 650000000,
+    "market_value": 312000000000,
+    "change_qoq": 2.8,
+    "portfolio_weight": 7.9,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i5",
+    "institution_name": "State Street Corp",
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corp",
+    "shares_held": 380000000,
+    "market_value": 86830000000,
+    "change_qoq": 4.5,
+    "portfolio_weight": 3.6,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i6",
+    "institution_name": "Fidelity Investments",
+    "ticker": "META",
+    "company_name": "Meta Platforms",
+    "shares_held": 220000000,
+    "market_value": 143000000000,
+    "change_qoq": 12.3,
+    "portfolio_weight": 5.1,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i7",
+    "institution_name": "Capital Group",
+    "ticker": "AVGO",
+    "company_name": "Broadcom Inc.",
+    "shares_held": 95000000,
+    "market_value": 33250000000,
+    "change_qoq": 8.7,
+    "portfolio_weight": 3.4,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i8",
+    "institution_name": "T. Rowe Price",
+    "ticker": "TSM",
+    "company_name": "Taiwan Semiconductor",
+    "shares_held": 180000000,
+    "market_value": 33360000000,
+    "change_qoq": 15.2,
+    "portfolio_weight": 4.5,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i9",
+    "institution_name": "Vanguard Group",
+    "ticker": "AMZN",
+    "company_name": "Amazon.com",
+    "shares_held": 500000000,
+    "market_value": 115000000000,
+    "change_qoq": -0.8,
+    "portfolio_weight": 2.8,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i10",
+    "institution_name": "BlackRock Inc.",
+    "ticker": "GOOGL",
+    "company_name": "Alphabet Inc.",
+    "shares_held": 340000000,
+    "market_value": 62000000000,
+    "change_qoq": 1.5,
+    "portfolio_weight": 1.6,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i11",
+    "institution_name": "Renaissance Technologies",
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corp",
+    "shares_held": 45000000,
+    "market_value": 10282500000,
+    "change_qoq": 25.0,
+    "portfolio_weight": 8.5,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i12",
+    "institution_name": "Citadel Advisors",
+    "ticker": "AAPL",
+    "company_name": "Apple Inc.",
+    "shares_held": 120000000,
+    "market_value": 29760000000,
+    "change_qoq": -3.2,
+    "portfolio_weight": 2.1,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i13",
+    "institution_name": "T. Rowe Price",
+    "ticker": "MSFT",
+    "company_name": "Microsoft Corp",
+    "shares_held": 150000000,
+    "market_value": 72000000000,
+    "change_qoq": 6.5,
+    "portfolio_weight": 9.7,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i14",
+    "institution_name": "Vanguard Group",
+    "ticker": "JPM",
+    "company_name": "JPMorgan Chase",
+    "shares_held": 350000000,
+    "market_value": 92750000000,
+    "change_qoq": 2.1,
+    "portfolio_weight": 2.3,
+    "report_date": "2026-03-31"
+  },
+  {
+    "id": "i15",
+    "institution_name": "Fidelity Investments",
+    "ticker": "NFLX",
+    "company_name": "Netflix Inc.",
+    "shares_held": 85000000,
+    "market_value": 83300000000,
+    "change_qoq": -5.5,
+    "portfolio_weight": 2.9,
+    "report_date": "2026-03-31"
+  }
+]

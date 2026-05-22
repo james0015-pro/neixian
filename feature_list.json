@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "features": [
+    {
+      "id": "F001",
+      "name": "Bloomberg 4-quadrant layout",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F002",
+      "name": "Insider trades table (sortable)",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F003",
+      "name": "Institution rankings table",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F004",
+      "name": "Detail panel (click row)",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F005",
+      "name": "Q4 Summary stats",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F006",
+      "name": "Keyboard navigation (1-4, ESC, /)",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F007",
+      "name": "BUY/SELL filter + search",
+      "phase": 1,
+      "status": "completed",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F008",
+      "name": "Lightweight Charts integration",
+      "phase": 1,
+      "status": "pending",
+      "file": "src/components/ChartPanel.tsx"
+    },
+    {
+      "id": "F009",
+      "name": "Insider history timeline in Q2",
+      "phase": 1,
+      "status": "pending",
+      "file": "src/pages/DashboardPage.tsx"
+    },
+    {
+      "id": "F010",
+      "name": "Python scraper scripts",
+      "phase": 2,
+      "status": "pending",
+      "file": "scripts/scrape-insider.py"
+    },
+    {
+      "id": "F011",
+      "name": "Real SEC EDGAR data",
+      "phase": 2,
+      "status": "pending",
+      "file": "src/data/"
+    },
+    {
+      "id": "F012",
+      "name": "GitHub Pages deploy",
+      "phase": 4,
+      "status": "pending",
+      "file": "vite.config.ts"
+    },
+    {
+      "id": "F013",
+      "name": "Password gate for beta",
+      "phase": 4,
+      "status": "pending",
+      "file": "src/components/PasswordGate.tsx"
+    }
+  ]
+}
