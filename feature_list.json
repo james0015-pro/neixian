@@ -68,15 +68,17 @@
       "id": "F010",
       "name": "Python scraper scripts",
       "phase": 2,
-      "status": "pending",
-      "file": "scripts/scrape-insider.py"
+      "status": "in_progress",
+      "file": "scripts/scrape-insider.py",
+      "note": "Scraper scripts created (scripts/scrape_data.py). Data pipeline running via cron."
     },
     {
       "id": "F011",
       "name": "Real SEC EDGAR data",
       "phase": 2,
-      "status": "pending",
-      "file": "src/data/"
+      "status": "in_progress",
+      "file": "src/data/",
+      "note": "Initial data loaded (200+ inst holdings, 90+ insider trades). Real SEC EDGAR data pending rate-limit resolution."
     },
     {
       "id": "F012",
@@ -89,7 +91,7 @@
       "id": "F013",
       "name": "Password gate for beta",
       "phase": 4,
-      "status": "pending",
+      "status": "completed",
       "file": "src/components/PasswordGate.tsx"
     }
   ]

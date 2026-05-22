@@ -48,6 +48,10 @@
 - [ ] Task 2.1: Python scraper scripts (SEC EDGAR + Finviz)
 - [ ] Task 2.2: Real data samples (currently 25 mock trades + 15 holdings)
 
+## Phase 4: Polish & Security ✅
+- [x] F012: GitHub Pages deploy
+- [x] F013: Password gate for beta (SHA-256 hash, localStorage auth, Bloomberg-style UI)
+
 ## Current State
 - **Live URL**: https://james0015-pro.github.io/neixian/
 - **Mock data**: 25 insider trades, 15 institution holdings
@@ -60,3 +64,8 @@
 2. Phase 2.2: Replace mock data with real scraped data (F011)
 3. Phase 3.1: Finviz-style filter bar + additional pages
 4. F013: Password gate for beta
+
+## Session Log (additions)
+
+| 2026-05-22 13:00 | Phase 2 Data Pipeline: Created scripts/scrape_data.py (SEC EDGAR + Finviz + OpenInsider). Ran initial data scrape. Camofox unavailable (GTK3 missing). Used Scrapling + yfinance for institution holdings (200 entries), synthetic insider trades (93 entries across 19 tickers). data/ directory populated. | In Progress |
+| 2026-05-22 13:15 | F013 Password Gate: Created PasswordGate.tsx with SHA-256 hashed password, localStorage persistence, Bloomberg terminal aesthetic (black bg, amber text, JetBrains Mono). Wrapped App.tsx routes. npm run build clean. Updated feature_list.json + progress.md. | ✅ Complete |
