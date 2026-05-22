@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, type FormEvent, type ReactNode } from 'react';
+import { useState, useCallback, type FormEvent, type ReactNode } from 'react';
 
 const AUTH_KEY = 'neixian_auth';
 // Simple hash for beta password — not cryptographically secure, just keeps casuals out
@@ -15,20 +15,10 @@ function sha256(message: string): Promise<string> {
 }
 
 export default function PasswordGate({ children }: { children: ReactNode }) {
-  const [authed, setAuthed] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [authed, setAuthed] = useState(() => localStorage.getItem(AUTH_KEY) === PASS_HASH);
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(false);
-
-  // Check localStorage on mount
-  useEffect(() => {
-    const saved = localStorage.getItem(AUTH_KEY);
-    if (saved === PASS_HASH) {
-      setAuthed(true);
-    }
-    setLoading(false);
-  }, []);
 
   const handleSubmit = useCallback(
     async (e: FormEvent) => {
@@ -53,32 +43,6 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
     },
     [password],
   );
-
-  // Loading state
-  if (loading) {
-    return (
-      <div
-        style={{
-          width: '100vw',
-          height: '100vh',
-          background: '#000',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <span
-          style={{
-            color: '#ff8c00',
-            fontFamily: 'JetBrains Mono, monospace',
-            fontSize: 14,
-          }}
-        >
-          LOADING...
-        </span>
-      </div>
-    );
-  }
 
   // Authenticated — render children
   if (authed) return <>{children}</>;
