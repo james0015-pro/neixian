@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T21:18:07.838380",
+  "generated_at": "2026-05-23T13:45:17.785731",
   "source": "Finviz + SEC EDGAR",
   "total_holdings": 20,
   "holdings": [
@@ -21,7 +21,7 @@
       "rsi14": 78.36,
       "debt_equity": 0.8,
       "profit_margin": 27.15,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -42,7 +42,7 @@
       "rsi14": 54.42,
       "debt_equity": 0.3,
       "profit_margin": 39.34,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -51,9 +51,9 @@
       "market_cap": 5210990000000.0,
       "price": 215.33,
       "pe_trailing": 32.98,
-      "pe_forward": 17.46,
+      "pe_forward": 17.45,
       "peg": 0.4,
-      "inst_own_pct": 69.22,
+      "inst_own_pct": 69.21,
       "insider_own_pct": 3.88,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -63,13 +63,13 @@
       "rsi14": 53.71,
       "debt_equity": 0.07,
       "profit_margin": 62.97,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
       "ticker": "GOOGL",
       "company_name": "GOOGL",
-      "market_cap": 4617520000000.0,
+      "market_cap": 4620520000000.0,
       "price": 382.97,
       "pe_trailing": 29.21,
       "pe_forward": 26.05,
@@ -84,7 +84,7 @@
       "rsi14": 57.49,
       "debt_equity": 0.2,
       "profit_margin": 37.86,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -105,7 +105,7 @@
       "rsi14": 57.98,
       "debt_equity": 0.51,
       "profit_margin": 12.22,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -126,7 +126,7 @@
       "rsi14": 45.34,
       "debt_equity": 0.36,
       "profit_margin": 32.84,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -147,7 +147,7 @@
       "rsi14": 58.3,
       "debt_equity": 0.19,
       "profit_margin": 3.95,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -158,7 +158,7 @@
       "pe_trailing": 14.68,
       "pe_forward": 12.98,
       "peg": 1.46,
-      "inst_own_pct": 75.17,
+      "inst_own_pct": 75.16,
       "insider_own_pct": 0.44,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -168,7 +168,7 @@
       "rsi14": 52.69,
       "debt_equity": 3.49,
       "profit_margin": 20.19,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -179,7 +179,7 @@
       "pe_trailing": 28.91,
       "pe_forward": 22.08,
       "peg": 1.62,
-      "inst_own_pct": 79.93,
+      "inst_own_pct": 79.91,
       "insider_own_pct": 12.11,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -189,7 +189,7 @@
       "rsi14": 57.78,
       "debt_equity": 0.67,
       "profit_margin": 51.21,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -198,8 +198,8 @@
       "market_cap": 958670000000.0,
       "price": 120.27,
       "pe_trailing": 42.37,
-      "pe_forward": 36.69,
-      "peg": 3.15,
+      "pe_forward": 36.73,
+      "peg": 3.18,
       "inst_own_pct": 36.22,
       "insider_own_pct": 45.08,
       "insider_trans_pct": 0.0,
@@ -210,7 +210,7 @@
       "rsi14": 33.88,
       "debt_equity": 0.79,
       "profit_margin": 3.13,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -231,7 +231,7 @@
       "rsi14": 58.3,
       "debt_equity": 0.68,
       "profit_margin": 21.83,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -252,7 +252,7 @@
       "rsi14": 49.96,
       "debt_equity": 0.68,
       "profit_margin": 18.82,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -261,10 +261,10 @@
       "market_cap": 440500000000.0,
       "price": 498.54,
       "pe_trailing": 28.85,
-      "pe_forward": 21.88,
+      "pe_forward": 21.87,
       "peg": 1.38,
       "inst_own_pct": 82.34,
-      "insider_own_pct": 8.32,
+      "insider_own_pct": 8.34,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
       "short_ratio": 0.0,
@@ -273,7 +273,7 @@
       "rsi14": 48.21,
       "debt_equity": 2.82,
       "profit_margin": 45.78,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -284,7 +284,7 @@
       "pe_trailing": 29.34,
       "pe_forward": 18.67,
       "peg": 1.26,
-      "inst_own_pct": 84.95,
+      "inst_own_pct": 84.94,
       "insider_own_pct": 0.28,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -294,7 +294,7 @@
       "rsi14": 67.84,
       "debt_equity": 0.8,
       "profit_margin": 2.68,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -305,7 +305,7 @@
       "pe_trailing": 22.23,
       "pe_forward": 19.44,
       "peg": 3.18,
-      "inst_own_pct": 75.61,
+      "inst_own_pct": 75.64,
       "insider_own_pct": 0.07,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -315,7 +315,7 @@
       "rsi14": 45.44,
       "debt_equity": 4.55,
       "profit_margin": 8.41,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -324,7 +324,7 @@
       "market_cap": 367600000000.0,
       "price": 51.8,
       "pe_trailing": 12.85,
-      "pe_forward": 10.26,
+      "pe_forward": 10.25,
       "peg": 0.69,
       "inst_own_pct": 77.34,
       "insider_own_pct": 0.29,
@@ -336,7 +336,7 @@
       "rsi14": 52.67,
       "debt_equity": 2.49,
       "profit_margin": 15.56,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -357,7 +357,7 @@
       "rsi14": 48.68,
       "debt_equity": 0.44,
       "profit_margin": 11.53,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -378,7 +378,7 @@
       "rsi14": 47.79,
       "debt_equity": 0.58,
       "profit_margin": 29.48,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -389,8 +389,8 @@
       "pe_trailing": 28.63,
       "pe_forward": 23.1,
       "peg": 1.06,
-      "inst_own_pct": 82.23,
-      "insider_own_pct": 0.63,
+      "inst_own_pct": 82.22,
+      "insider_own_pct": 0.65,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
       "short_ratio": 0.0,
@@ -399,7 +399,7 @@
       "rsi14": 43.87,
       "debt_equity": 0.54,
       "profit_margin": 28.29,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     },
     {
@@ -410,7 +410,7 @@
       "pe_trailing": 23.06,
       "pe_forward": 12.08,
       "peg": 0.97,
-      "inst_own_pct": 93.41,
+      "inst_own_pct": 93.38,
       "insider_own_pct": 3.19,
       "insider_trans_pct": 0.0,
       "short_float_pct": 0.0,
@@ -420,7 +420,7 @@
       "rsi14": 50.82,
       "debt_equity": 0.3,
       "profit_margin": 17.96,
-      "data_date": "2026-05-22",
+      "data_date": "2026-05-23",
       "source": "Finviz"
     }
   ]

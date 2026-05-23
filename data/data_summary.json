@@ -1,20 +1,32 @@
 {
-  "generated_at": "2026-05-22T21:18:53.186790",
-  "tickers_scraped": 20,
+  "generated_at": "2026-05-23T13:47:40.303767",
+  "tickers_tracked": 20,
   "sources": {
-    "finviz": {"status": "ok", "holdings": 20},
-    "sec_edgar": {"status": "ok", "trades": 100, "buys": 44, "sells": 56},
-    "openinsider": {"status": "skipped", "reason": "tbody empty (JS-rendered, no browser)"},
-    "camofox": {"status": "skipped", "reason": "libgtk-3.so.0 missing"}
+    "finviz": {
+      "status": "ok",
+      "holdings": 20,
+      "file": "institution_holdings.json",
+      "size_bytes": 10584
+    },
+    "sec_edgar": {
+      "status": "ok",
+      "trades": 144,
+      "file": "insider_trades.json",
+      "size_bytes": 83507
+    },
+    "openinsider": {
+      "status": "ok",
+      "trades": 98,
+      "discovery": "FIXED: data is in tbody[1] (second tbody), not tbody[0]",
+      "file": "openinsider_trades.json",
+      "size_bytes": 38330
+    },
+    "camofox": {
+      "status": "skipped",
+      "reason": "libgtk-3.so.0 missing on headless server"
+    }
   },
-  "total_trades": 100,
-  "frontend_total": 87,
-  "buys": 44,
-  "sells": 56,
-  "data_files": {
-    "data/institution_holdings.json": "10.6 KB (20 holdings)",
-    "data/insider_trades.json": "58.1 KB (100 trades)",
-    "data/stock_snapshots.json": "13.7 KB (20 snapshots)",
-    "src/data/insider-trades.json": "37.3 KB (87 merged entries)"
-  }
+  "sec_buys": 71,
+  "sec_sells": 73,
+  "total_data_files": 3
 }
