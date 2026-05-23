@@ -17,6 +17,8 @@
 | 2026-05-23 06:07 | Night Shift 7: Phase 3.1 Finviz Screener (F014) | ✅ Complete |
 | 2026-05-23 10:22 | Night Shift 8: Phase 3.2 Heatmap + Treemap (F015) | ✅ Complete |
 | 2026-05-23 11:00 | Night Shift 9: Lint cleanup + deploy + health check | ✅ Complete |
+| 2026-05-23 13:44 | Night Shift 10: Full data refresh — Finviz (20) + SEC (144 trades) + OpenInsider fix (98 trades) | ✅ Complete |
+| 2026-05-23 17:07 | Night Shift 11: Health check (build+lint ✅) + deploy latest build to GitHub Pages | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -83,7 +85,7 @@
 
 ## Current State
 - **Live URL**: https://james0015-pro.github.io/neixian/
-- **Real data**: 67 SEC EDGAR Form 4 trades (23 buys, 37 sells) + mock data
+- **Real data**: 144 SEC EDGAR Form 4 trades (71 buys, 73 sells) + 98 OpenInsider cross-company trades + mock data
 - **Coverage**: All 20 tracked tickers — 100% success rate scraping SEC
 - **Quadrants**: Q1=Insider table, Q2=Detail panel + Chart + Timeline, Q3=Institution rankings, Q4=Summary stats
 - **Features**: Sortable columns, BUY/SELL filter, search, keyboard nav (1-4, ESC, /)
