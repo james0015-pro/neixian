@@ -6,6 +6,7 @@ import DashboardPage from '@/pages/DashboardPage';
 const ScreenerPage = lazy(() => import('@/pages/ScreenerPage'));
 const HeatmapPage = lazy(() => import('@/pages/HeatmapPage'));
 const TreemapPage = lazy(() => import('@/pages/TreemapPage'));
+const StockDetailPage = lazy(() => import('@/pages/StockDetailPage'));
 
 function LoadingFallback() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/screener" element={<ScreenerPage />} />
             <Route path="/heatmap" element={<HeatmapPage />} />
             <Route path="/treemap" element={<TreemapPage />} />
+            <Route path="/stocks/:ticker" element={<StockDetailPage />} />
           </Routes>
         </Suspense>
       </HashRouter>

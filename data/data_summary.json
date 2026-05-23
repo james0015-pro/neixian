@@ -1,32 +1,35 @@
 {
-  "generated_at": "2026-05-23T13:47:40.303767",
+  "generated_at": "2026-05-23T17:57:25.915346+00:00",
   "tickers_tracked": 20,
   "sources": {
     "finviz": {
       "status": "ok",
       "holdings": 20,
       "file": "institution_holdings.json",
-      "size_bytes": 10584
+      "size_bytes": 6473
     },
     "sec_edgar": {
       "status": "ok",
-      "trades": 144,
+      "trades": 304,
+      "direct_insider": 304,
+      "cross_holdings": 0,
+      "buys": 97,
+      "sells": 207,
+      "filings_processed": 100,
       "file": "insider_trades.json",
-      "size_bytes": 83507
+      "size_bytes": 124105
     },
     "openinsider": {
       "status": "ok",
-      "trades": 98,
-      "discovery": "FIXED: data is in tbody[1] (second tbody), not tbody[0]",
+      "trades": 100,
+      "discovery": "Data in table[9] (not tbody[1]), 100 rows per page",
       "file": "openinsider_trades.json",
-      "size_bytes": 38330
+      "size_bytes": 28878
     },
     "camofox": {
       "status": "skipped",
       "reason": "libgtk-3.so.0 missing on headless server"
     }
   },
-  "sec_buys": 71,
-  "sec_sells": 73,
   "total_data_files": 3
 }

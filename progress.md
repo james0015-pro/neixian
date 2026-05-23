@@ -19,6 +19,7 @@
 | 2026-05-23 11:00 | Night Shift 9: Lint cleanup + deploy + health check | ✅ Complete |
 | 2026-05-23 13:44 | Night Shift 10: Full data refresh — Finviz (20) + SEC (144 trades) + OpenInsider fix (98 trades) | ✅ Complete |
 | 2026-05-23 17:07 | Night Shift 11: Health check (build+lint ✅) + deploy latest build to GitHub Pages | ✅ Complete |
+| 2026-05-23 18:30 | Night Shift 12: F016 StockDetailPage (/stocks/:ticker) — confidence score + ChartPanel + institution holdings table + insider trades timeline with ALL/BUY/SELL filter + localStorage watchlist + DashboardPage ticker → navigate | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -74,10 +75,10 @@
 - Matthew Garman (AMZN) exercised options and sold (M+S) — compensation
 - Dina Powell (META Director) exercised options (M) — insider confidence
 
-## Phase 3: Finviz-style Screener 🚧
+## Phase 3: Finviz-style Screener ✅
 - [x] Task 3.1: Finviz-style filter bar + sortable screener page (F014)
 - [x] Task 3.2: Heatmap/treemap views (F015)
-- [ ] Task 3.3: Stock detail page with charts + stats (F016)
+- [x] Task 3.3: Stock detail page with charts + stats (F016)
 
 ## Phase 4: Polish & Security ✅
 - [x] F012: GitHub Pages deploy
@@ -92,11 +93,12 @@
 - **Screener (F014)**: `/screener` route, DIR filter (ALL/BUY/SELL), ticker dropdown, SUMMARY/TRADES view modes, 9 sortable summary columns + 8 sortable trade columns, computed signal scores, TERM/SCRN nav toggle
 - **Heatmap (F015)**: `/heatmap` route, colored tile grid (SIGNAL/NET_FLOW/VOLUME modes), adjustable tile size (40-120px), color legend, hover tooltips, HTMP active nav
 - **Treemap (F015)**: `/treemap` route, SVG treemap (INSIDER_NET/BUY_RATIO/TOTAL_VALUE modes), tile size proportional to trade volume, hover details, TRMP active nav
+- **Stock Detail (F016)**: `/stocks/:ticker` route, confidence score + sub-scores, 90D candlestick chart (lightweight-charts), institution holdings table, insider trades timeline with ALL/BUY/SELL filter, localStorage watchlist, 12.62KB lazy chunk
 - **Dual-page nav**: TERM/SCRN/HTMP/TRMP toggle buttons on all page headers, consistent active-state styling
 - **Styling**: Pure Bloomberg terminal (#000 bg, #ff8c00 amber, JetBrains Mono, inline styles)
 - **Password gate**: Active, SHA-256 hashed, localStorage persistence
 
 ## Next Up (Priority Order)
-1. **Phase 3.3:** Stock detail page with charts + stats (F016)
-2. **Data freshness:** Set up cron job to scrape SEC EDGAR daily
-3. **Institutions:** Enhance with real yfinance institutional ownership data
+1. **Phase 4.1:** Data freshness — cron job to scrape SEC EDGAR daily
+2. **Institutions:** Enhance with real yfinance institutional ownership data
+3. **Phase 4.2:** Error boundaries + loading states for all lazy routes

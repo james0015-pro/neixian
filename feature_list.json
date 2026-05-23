@@ -114,7 +114,9 @@
       "id": "F016",
       "name": "Stock detail page with charts + stats",
       "phase": 3,
-      "status": "planned"
+      "status": "completed",
+      "file": "src/pages/StockDetailPage.tsx",
+      "note": "Lazy-loaded route /stocks/:ticker. Bloomberg terminal style: confidence score with colored progress bar + 4 sub-scores grid, 90-day candlestick ChartPanel (lightweight-charts), institution holdings table (value/change/weight), insider trades timeline with ALL/BUY/SELL filter, localStorage watchlist toggle, footer status bar. 12.62KB chunk. DashboardPage ticker cells now navigate to stock detail."
     }
   ]
 }

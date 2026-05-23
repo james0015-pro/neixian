@@ -467,7 +467,7 @@ export default function DashboardPage() {
                   <Cell w={80} color="#e6e6e6"
                     onClick={() => setSelectedInsider(t)}>{truncate(t.insider_name, 12)}</Cell>
                   <Cell w={75} color="#888">{truncate(t.source_company, 12)}</Cell>
-                  <Cell w={65} color="#ff8c00" bold>{t.target_ticker}</Cell>
+                  <Cell w={65} color="#ff8c00" bold onClick={() => navigate(`/stocks/${t.target_ticker}`)}>{t.target_ticker}</Cell>
                   <Cell w={95} color="#888">{truncate(t.target_company, 15)}</Cell>
                   <RCell w={55} c={isBuy ? '#0c6' : '#f33'}>{formatCurrency(t.total_value)}</RCell>
                   <Cell w={55} color="#888">{formatDate(t.transaction_date)}</Cell>
