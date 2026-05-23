@@ -20,6 +20,7 @@
 | 2026-05-23 13:44 | Night Shift 10: Full data refresh — Finviz (20) + SEC (144 trades) + OpenInsider fix (98 trades) | ✅ Complete |
 | 2026-05-23 17:07 | Night Shift 11: Health check (build+lint ✅) + deploy latest build to GitHub Pages | ✅ Complete |
 | 2026-05-23 18:30 | Night Shift 12: F016 StockDetailPage (/stocks/:ticker) — confidence score + ChartPanel + institution holdings table + insider trades timeline with ALL/BUY/SELL filter + localStorage watchlist + DashboardPage ticker → navigate | ✅ Complete |
+| 2026-05-23 21:05 | Night Shift 13: F017 Error boundaries + loading skeletons — ErrorBoundary class component (catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD), RouteLoadingSkeleton (animated amber bar), DataRowSkeleton + PanelSkeleton, per-route wrapping in App.tsx | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -97,8 +98,9 @@
 - **Dual-page nav**: TERM/SCRN/HTMP/TRMP toggle buttons on all page headers, consistent active-state styling
 - **Styling**: Pure Bloomberg terminal (#000 bg, #ff8c00 amber, JetBrains Mono, inline styles)
 - **Password gate**: Active, SHA-256 hashed, localStorage persistence
+- **Error boundaries (F017)**: Per-route ErrorBoundary (class component with retry state), catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD buttons, animated RouteLoadingSkeleton for lazy chunk loading, DataRowSkeleton + PanelSkeleton utilities
 
 ## Next Up (Priority Order)
-1. **Phase 4.1:** Data freshness — cron job to scrape SEC EDGAR daily
-2. **Institutions:** Enhance with real yfinance institutional ownership data
-3. **Phase 4.2:** Error boundaries + loading states for all lazy routes
+1. **F018: Institution data enhancement** — real yfinance institutional ownership data (currently only 15 records across 10 tickers)
+2. **F019: Playwright E2E smoke tests** — page load, route navigation, data rendering
+3. **Phase 5: Watchlist persistence** — backend watchlist (needs Supabase or similar)
