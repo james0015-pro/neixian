@@ -9,16 +9,6 @@ const ALL_TRADES: InsiderTrade[] = insiderTradesRaw as InsiderTrade[];
 
 // ─── Constants ────────────────────────────────────────────────
 const ROW_H = 20;
-const COLORS = {
-  amber: '#ff8c00',
-  green: '#0c6',
-  red: '#f33',
-  white: '#e6e6e6',
-  gray: '#888',
-  grayDim: '#555',
-  grayDark: '#333',
-};
-
 const STYLES = {
   header: {
     height: 28, background: '#0a0a0a', borderBottom: '1px solid #1f1f1f',
@@ -357,9 +347,6 @@ export default function ScreenerPage() {
             <div style={{ flex: 1, overflow: 'auto' }}>
               {summaries.map((s, i) => {
                 const netColor = s.netValue >= 0 ? '#0c6' : '#f33';
-                const rowBg = s.netValue >= 0
-                  ? 'rgba(0,204,102,0.03)'
-                  : 'rgba(255,51,51,0.03)';
                 return (
                   <Row key={s.ticker} h={i % 2 === 0}>
                     <Cell w={65} color="#ff8c00" bold>{s.ticker}</Cell>

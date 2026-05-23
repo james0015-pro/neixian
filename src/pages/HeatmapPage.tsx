@@ -118,7 +118,7 @@ function HeatTile({ data, mode, cellSize, maxAbsNet, maxVolume, onClick }: {
   const [hovered, setHovered] = useState(false);
 
   let tileColor: string;
-  let textColor = '#fff';
+  let textColor: string;
   let subText: string;
 
   if (mode === 'SIGNAL') {
@@ -207,7 +207,6 @@ export default function HeatmapPage() {
   const navigate = useNavigate();
   const [mode, setMode] = useState<HeatmapMode>('SIGNAL');
   const [cellSize, setCellSize] = useState(80);
-  const [hoveredTicker, setHoveredTicker] = useState<string | null>(null);
 
   const today = new Date().toISOString().slice(0, 10);
 

@@ -76,9 +76,6 @@ function computeTreemapLayout(data: TileData[], width: number, height: number): 
 
   // Sort by total value descending
   const sorted = [...data].sort((a, b) => b.totalValue - a.totalValue);
-  const totalVal = sorted.reduce((s, d) => s + Math.max(d.totalValue, 1), 0);
-  const area = width * height;
-  const scaleFactor = area / totalVal;
 
   // Simple grid layout: cols proportional to aspect ratio
   const cols = Math.max(3, Math.min(6, Math.ceil(Math.sqrt(data.length * (width / height)))));
