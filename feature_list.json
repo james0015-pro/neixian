@@ -93,6 +93,26 @@
       "phase": 4,
       "status": "completed",
       "file": "src/components/PasswordGate.tsx"
+    },
+    {
+      "id": "F014",
+      "name": "Finviz-style screener page with filters + summary/trades modes",
+      "phase": 3,
+      "status": "completed",
+      "file": "src/pages/ScreenerPage.tsx",
+      "note": "Lazy-loaded route /screener. DIR filter (ALL/BUY/SELL), ticker dropdown, SUMMARY/TRADES view toggle, sortable columns (9 in summary, 8 in trades). Computed signal score per ticker. TERM/SCRN nav toggle in header. Bloomberg dark theme, 10.85KB chunk."
+    },
+    {
+      "id": "F015",
+      "name": "Heatmap/treemap view",
+      "phase": 3,
+      "status": "planned"
+    },
+    {
+      "id": "F016",
+      "name": "Stock detail page with charts + stats",
+      "phase": 3,
+      "status": "planned"
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { InsiderTrade } from '@/types/insider';
 import type { InstitutionHolding } from '@/types/institution';
 import { formatCurrency, formatDate, formatPercent, truncate } from '@/lib/utils';
@@ -240,6 +241,7 @@ function InsiderTimeline({ insiderName }: { insiderName: string }) {
 // ─── Main Dashboard ───────────────────────────────────────────
 
 export default function DashboardPage() {
+  const navigate = useNavigate();
   const [selectedInsider, setSelectedInsider] = useState<InsiderTrade | null>(null);
   const [selectedInstitution, setSelectedInstitution] = useState<InstitutionHolding | null>(null);
   const [insiderSort, setInsiderSort] = useState<{ field: keyof InsiderTrade; dir: 'asc' | 'desc' }>({
@@ -350,6 +352,18 @@ export default function DashboardPage() {
         <span style={{ color: '#ff8c00', fontWeight: 700, fontSize: 12, letterSpacing: 1, marginRight: 12 }}>
           內線 NEIXIAN
         </span>
+        <div style={{ display: 'flex', gap: 4 }}>
+          <button style={{
+            background: '#1a1a1a', border: '1px solid #ff8c00', color: '#ff8c00',
+            cursor: 'default', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>TERM</button>
+          <button onClick={() => navigate('/screener')} style={{
+            background: 'transparent', border: '1px solid #333', color: '#888',
+            cursor: 'pointer', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>SCRN</button>
+        </div>
         <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
           <div style={{
             display: 'flex', whiteSpace: 'nowrap', gap: 24,

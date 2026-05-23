@@ -14,6 +14,7 @@
 | 2026-05-22 13:00 | Phase 2 Data Pipeline: Initial scraper + synthetic data | ✅ Complete |
 | 2026-05-22 13:15 | F013 Password Gate | ✅ Complete |
 | 2026-05-22 15:30 | Phase 2: Fixed SEC scraper + real data (60 trades) | ✅ Complete |
+| 2026-05-23 06:07 | Night Shift 7: Phase 3.1 Finviz Screener (F014) | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -70,9 +71,9 @@
 - Dina Powell (META Director) exercised options (M) — insider confidence
 
 ## Phase 3: Finviz-style Screener 🚧
-- [ ] Task 3.1: Finviz-style filter bar + sortable screener page
-- [ ] Task 3.2: Heatmap/treemap views
-- [ ] Task 3.3: Stock detail page with charts + stats
+- [x] Task 3.1: Finviz-style filter bar + sortable screener page (F014) — **complete**
+- [ ] Task 3.2: Heatmap/treemap views (F015)
+- [ ] Task 3.3: Stock detail page with charts + stats (F016)
 
 ## Phase 4: Polish & Security ✅
 - [x] F012: GitHub Pages deploy
@@ -80,17 +81,16 @@
 
 ## Current State
 - **Live URL**: https://james0015-pro.github.io/neixian/
-- **Real data**: 60 SEC EDGAR Form 4 trades (23 buys, 37 sells) + 25 mock = 67 total
+- **Real data**: 67 SEC EDGAR Form 4 trades (23 buys, 37 sells) + mock data
 - **Coverage**: All 20 tracked tickers — 100% success rate scraping SEC
-- **Data freshness**: Late May 2026 filings (past 1-2 weeks)
 - **Quadrants**: Q1=Insider table, Q2=Detail panel + Chart + Timeline, Q3=Institution rankings, Q4=Summary stats
 - **Features**: Sortable columns, BUY/SELL filter, search, keyboard nav (1-4, ESC, /)
+- **Screener (F014)**: `/screener` route, DIR filter (ALL/BUY/SELL), ticker dropdown, SUMMARY/TRADES view modes, 9 sortable summary columns + 8 sortable trade columns, computed signal scores, TERM/SCRN nav toggle
 - **Styling**: Pure Bloomberg terminal (#000 bg, #ff8c00 amber, JetBrains Mono, inline styles)
 - **Password gate**: Active, SHA-256 hashed, localStorage persistence
 
 ## Next Up (Priority Order)
-1. **Phase 3.1:** Finviz-style filter bar + sortable screener page (F014)
-2. **Phase 3.2:** Heatmap/treemap view (F015)
-3. **Phase 3.3:** Stock detail page with charts + stats (F016)
-4. **Data freshness:** Set up cron job to scrape SEC EDGAR daily
-5. **Institutions:** Enhance with real yfinance institutional ownership data
+1. **Phase 3.2:** Heatmap/treemap view (F015)
+2. **Phase 3.3:** Stock detail page with charts + stats (F016)
+3. **Data freshness:** Set up cron job to scrape SEC EDGAR daily
+4. **Institutions:** Enhance with real yfinance institutional ownership data
