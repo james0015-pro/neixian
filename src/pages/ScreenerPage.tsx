@@ -265,6 +265,16 @@ export default function ScreenerPage() {
             cursor: 'pointer', fontSize: 9, padding: '2px 10px',
             fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
           }}>SCRN</button>
+          <button onClick={() => navigate('/heatmap')} style={{
+            background: 'transparent', border: '1px solid #333', color: '#888',
+            cursor: 'pointer', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>HTMP</button>
+          <button onClick={() => navigate('/treemap')} style={{
+            background: 'transparent', border: '1px solid #333', color: '#888',
+            cursor: 'pointer', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>TRMP</button>
         </div>
         <span style={{ marginLeft: 'auto', color: '#555', fontSize: 9 }}>
           {today.replace(/-/g, '/')}

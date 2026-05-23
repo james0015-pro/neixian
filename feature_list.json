@@ -106,7 +106,9 @@
       "id": "F015",
       "name": "Heatmap/treemap view",
       "phase": 3,
-      "status": "planned"
+      "status": "completed",
+      "file": "src/pages/HeatmapPage.tsx + src/pages/TreemapPage.tsx",
+      "note": "HeatmapPage: colored tile grid with SIGNAL/NET_FLOW/VOLUME modes, adjustable tile size (40-120px), hover tooltips. TreemapPage: SVG treemap with INSIDER_NET/BUY_RATIO/TOTAL_VALUE modes, tile size proportional to trade volume. Both lazy-loaded routes. Nav buttons (HTMP/TRMP) on all page headers. Chunky sizes: 7.94KB heatmap, 7.54KB treemap."
     },
     {
       "id": "F016",

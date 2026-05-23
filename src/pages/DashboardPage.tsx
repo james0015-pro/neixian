@@ -363,6 +363,16 @@ export default function DashboardPage() {
             cursor: 'pointer', fontSize: 9, padding: '2px 10px',
             fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
           }}>SCRN</button>
+          <button onClick={() => navigate('/heatmap')} style={{
+            background: 'transparent', border: '1px solid #333', color: '#888',
+            cursor: 'pointer', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>HTMP</button>
+          <button onClick={() => navigate('/treemap')} style={{
+            background: 'transparent', border: '1px solid #333', color: '#888',
+            cursor: 'pointer', fontSize: 9, padding: '2px 10px',
+            fontFamily: 'JetBrains Mono, monospace', borderRadius: 2,
+          }}>TRMP</button>
         </div>
         <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
           <div style={{

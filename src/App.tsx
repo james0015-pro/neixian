@@ -4,6 +4,8 @@ import PasswordGate from '@/components/PasswordGate';
 import DashboardPage from '@/pages/DashboardPage';
 
 const ScreenerPage = lazy(() => import('@/pages/ScreenerPage'));
+const HeatmapPage = lazy(() => import('@/pages/HeatmapPage'));
+const TreemapPage = lazy(() => import('@/pages/TreemapPage'));
 
 function LoadingFallback() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/screener" element={<ScreenerPage />} />
+            <Route path="/heatmap" element={<HeatmapPage />} />
+            <Route path="/treemap" element={<TreemapPage />} />
           </Routes>
         </Suspense>
       </HashRouter>
