@@ -20,7 +20,9 @@
 | 2026-05-23 13:44 | Night Shift 10: Full data refresh — Finviz (20) + SEC (144 trades) + OpenInsider fix (98 trades) | ✅ Complete |
 | 2026-05-23 17:07 | Night Shift 11: Health check (build+lint ✅) + deploy latest build to GitHub Pages | ✅ Complete |
 | 2026-05-23 18:30 | Night Shift 12: F016 StockDetailPage (/stocks/:ticker) — confidence score + ChartPanel + institution holdings table + insider trades timeline with ALL/BUY/SELL filter + localStorage watchlist + DashboardPage ticker → navigate | ✅ Complete |
-| 2026-05-23 21:05 | Night Shift 13: F017 Error boundaries + loading skeletons — ErrorBoundary class component (catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD), RouteLoadingSkeleton (animated amber bar), DataRowSkeleton + PanelSkeleton, per-route wrapping in App.tsx | ✅ Complete |
+|| 2026-05-23 21:05 | Night Shift 13: F017 Error boundaries + loading skeletons — ErrorBoundary class component (catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD), RouteLoadingSkeleton (animated amber bar), DataRowSkeleton + PanelSkeleton, per-route wrapping in App.tsx | ✅ Complete |
+|| 2026-05-23 22:06 | Night Shift 14: Full data refresh — Finviz (20) + SEC EDGAR (239 trades, fixed rate-limit) + OpenInsider (100 trades, fixed column parser) + frontend sync (339 combined) + build verified ✅ | ✅ Complete |
+|| 2026-05-24 06:30 | Night Shift 15: F018 Institution data enhancement — yfinance institutional_holders scraper (scripts/scrape_yfinance_institutions.py), 200 real holder records (10 per ticker × 20 tickers), real names (BlackRock, Vanguard, State Street, Berkshire, etc.), npm run build ✅ (1.55s), GitHub Pages deployed ✅ | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -87,9 +89,10 @@
 
 ## Current State
 - **Live URL**: https://james0015-pro.github.io/neixian/
-- **Real data**: 144 SEC EDGAR Form 4 trades (71 buys, 73 sells) + 98 OpenInsider cross-company trades + mock data
-- **Coverage**: All 20 tracked tickers — 100% success rate scraping SEC
-- **Quadrants**: Q1=Insider table, Q2=Detail panel + Chart + Timeline, Q3=Institution rankings, Q4=Summary stats
+- **Real data**: 239 SEC EDGAR Form 4 trades (89 buys, 150 sells) + 100 OpenInsider cross-company trades = 339 combined (106 buys, 233 sells)
+- **Institution holdings**: 200 real yfinance records — 10 top holders per ticker × 20 tickers (BlackRock, Vanguard, State Street, Berkshire, etc.)
+- **Coverage**: All 20 tracked tickers — 100% success rate scraping SEC and yfinance
+- **Quadrants**: Q1=Insider table, Q2=Detail panel + Chart + Timeline, Q3=Institution rankings (now with real holder names!), Q4=Summary stats
 - **Features**: Sortable columns, BUY/SELL filter, search, keyboard nav (1-4, ESC, /)
 - **Screener (F014)**: `/screener` route, DIR filter (ALL/BUY/SELL), ticker dropdown, SUMMARY/TRADES view modes, 9 sortable summary columns + 8 sortable trade columns, computed signal scores, TERM/SCRN nav toggle
 - **Heatmap (F015)**: `/heatmap` route, colored tile grid (SIGNAL/NET_FLOW/VOLUME modes), adjustable tile size (40-120px), color legend, hover tooltips, HTMP active nav
@@ -101,6 +104,6 @@
 - **Error boundaries (F017)**: Per-route ErrorBoundary (class component with retry state), catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD buttons, animated RouteLoadingSkeleton for lazy chunk loading, DataRowSkeleton + PanelSkeleton utilities
 
 ## Next Up (Priority Order)
-1. **F018: Institution data enhancement** — real yfinance institutional ownership data (currently only 15 records across 10 tickers)
+1. **F018: Institution data enhancement** — ✅ COMPLETE (Night Shift 15) — 200 real yfinance institutional holder records across 20 tickers
 2. **F019: Playwright E2E smoke tests** — page load, route navigation, data rendering
 3. **Phase 5: Watchlist persistence** — backend watchlist (needs Supabase or similar)

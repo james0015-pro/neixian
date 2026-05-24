@@ -125,6 +125,14 @@
       "status": "completed",
       "file": "src/components/ErrorBoundary.tsx + src/components/LoadingSkeleton.tsx",
       "note": "Production-grade error handling for all lazy-loaded routes. ErrorBoundary catches rendering errors (chunk load failure, runtime exceptions) with Bloomberg-styled error screen + RETRY/RELOAD buttons. Per-route Suspense with RouteLoadingSkeleton (animated amber progress bar). DataRowSkeleton + PanelSkeleton for table/panel loading states. Main bundle +2.9KB."
+    },
+    {
+      "id": "F018",
+      "name": "Real yfinance institution holdings data",
+      "phase": 5,
+      "status": "completed",
+      "file": "scripts/scrape_yfinance_institutions.py → src/data/institution-holdings.json",
+      "note": "Replaced 20 generic placeholder records with 200 real institutional holder records from yfinance. 10 top holders per ticker × 20 tickers. Real names: BlackRock, Vanguard, State Street, Berkshire Hathaway, etc. npm run build ✅ (1.55s). GitHub Pages deployed. Q3 Institution rankings now show actual holder names and values."
     }
   ]
 }
