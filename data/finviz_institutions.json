@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-05-24T12:55:39Z",
-  "source": "finviz",
-  "total_snapshots": 20,
-  "snapshots": {
-    "AAPL": {
+  "count": 20,
+  "errors": [],
+  "tickers": [
+    {
       "ticker": "AAPL",
       "price": 312.97,
       "market_cap": 4535750000000.0,
@@ -19,9 +18,10 @@
       "beta": 1.08,
       "rsi": 78.36,
       "debt_eq": 0.8,
-      "profit_margin": 27.15
+      "profit_margin": 27.15,
+      "timestamp": "2026-05-24T12:50:17Z"
     },
-    "MSFT": {
+    {
       "ticker": "MSFT",
       "price": 559.62,
       "market_cap": 3109320000000.0,
@@ -37,9 +37,10 @@
       "beta": 1.09,
       "rsi": 54.42,
       "debt_eq": 0.3,
-      "profit_margin": 39.34
+      "profit_margin": 39.34,
+      "timestamp": "2026-05-24T12:50:18Z"
     },
-    "NVDA": {
+    {
       "ticker": "NVDA",
       "price": 295.97,
       "market_cap": 5210990000000.0,
@@ -55,9 +56,10 @@
       "beta": 2.24,
       "rsi": 53.71,
       "debt_eq": 0.07,
-      "profit_margin": 62.97
+      "profit_margin": 62.97,
+      "timestamp": "2026-05-24T12:50:19Z"
     },
-    "GOOGL": {
+    {
       "ticker": "GOOGL",
       "price": 432.43,
       "market_cap": 4620520000000.0,
@@ -73,9 +75,10 @@
       "beta": 1.26,
       "rsi": 57.49,
       "debt_eq": 0.2,
-      "profit_margin": 37.86
+      "profit_margin": 37.86,
+      "timestamp": "2026-05-24T12:50:20Z"
     },
-    "AMZN": {
+    {
       "ticker": "AMZN",
       "price": 316.06,
       "market_cap": 2864830000000.0,
@@ -91,9 +94,10 @@
       "beta": 1.46,
       "rsi": 57.98,
       "debt_eq": 0.51,
-      "profit_margin": 12.22
+      "profit_margin": 12.22,
+      "timestamp": "2026-05-24T12:50:21Z"
     },
-    "META": {
+    {
       "ticker": "META",
       "price": 819.83,
       "market_cap": 1549100000000.0,
@@ -109,9 +113,10 @@
       "beta": 1.23,
       "rsi": 45.34,
       "debt_eq": 0.36,
-      "profit_margin": 32.84
+      "profit_margin": 32.84,
+      "timestamp": "2026-05-24T12:50:22Z"
     },
-    "TSLA": {
+    {
       "ticker": "TSLA",
       "price": 395.21,
       "market_cap": 1599980000000.0,
@@ -127,9 +132,10 @@
       "beta": 1.79,
       "rsi": 58.3,
       "debt_eq": 0.19,
-      "profit_margin": 3.95
+      "profit_margin": 3.95,
+      "timestamp": "2026-05-24T12:50:23Z"
     },
-    "BRK.B": {
+    {
       "ticker": "BRK.B",
       "price": 509.89,
       "market_cap": 1048579999999.9999,
@@ -145,9 +151,10 @@
       "beta": 0.63,
       "rsi": 58.48,
       "debt_eq": 0.2,
-      "profit_margin": 19.31
+      "profit_margin": 19.31,
+      "timestamp": "2026-05-24T12:50:24Z"
     },
-    "JPM": {
+    {
       "ticker": "JPM",
       "price": 345.59,
       "market_cap": 820950000000.0,
@@ -163,9 +170,10 @@
       "beta": 1.01,
       "rsi": 52.69,
       "debt_eq": 3.49,
-      "profit_margin": 20.19
+      "profit_margin": 20.19,
+      "timestamp": "2026-05-24T12:50:25Z"
     },
-    "V": {
+    {
       "ticker": "V",
       "price": 401.42,
       "market_cap": 619650000000.0,
@@ -181,9 +189,10 @@
       "beta": 0.78,
       "rsi": 57.78,
       "debt_eq": 0.67,
-      "profit_margin": 51.21
+      "profit_margin": 51.21,
+      "timestamp": "2026-05-24T12:50:26Z"
     },
-    "UNH": {
+    {
       "ticker": "UNH",
       "price": 396.16,
       "market_cap": 352790000000.0,
@@ -199,9 +208,10 @@
       "beta": 0.65,
       "rsi": 67.84,
       "debt_eq": 0.8,
-      "profit_margin": 2.68
+      "profit_margin": 2.68,
+      "timestamp": "2026-05-24T12:50:27Z"
     },
-    "XOM": {
+    {
       "ticker": "XOM",
       "price": 168.64,
       "market_cap": 642140000000.0,
@@ -217,9 +227,10 @@
       "beta": 0.18,
       "rsi": 51.69,
       "debt_eq": 0.19,
-      "profit_margin": 7.69
+      "profit_margin": 7.69,
+      "timestamp": "2026-05-24T12:50:28Z"
     },
-    "WMT": {
+    {
       "ticker": "WMT",
       "price": 140.29,
       "market_cap": 958670000000.0,
@@ -235,9 +246,10 @@
       "beta": 0.63,
       "rsi": 33.88,
       "debt_eq": 0.79,
-      "profit_margin": 3.13
+      "profit_margin": 3.13,
+      "timestamp": "2026-05-24T12:50:30Z"
     },
-    "JNJ": {
+    {
       "ticker": "JNJ",
       "price": 261.59,
       "market_cap": 564110000000.0,
@@ -253,9 +265,10 @@
       "beta": 0.26,
       "rsi": 58.3,
       "debt_eq": 0.68,
-      "profit_margin": 21.83
+      "profit_margin": 21.83,
+      "timestamp": "2026-05-24T12:50:31Z"
     },
-    "MA": {
+    {
       "ticker": "MA",
       "price": 650.38,
       "market_cap": 440500000000.0,
@@ -271,9 +284,10 @@
       "beta": 0.75,
       "rsi": 48.21,
       "debt_eq": 2.82,
-      "profit_margin": 45.78
+      "profit_margin": 45.78,
+      "timestamp": "2026-05-24T12:50:32Z"
     },
-    "PG": {
+    {
       "ticker": "PG",
       "price": 163.85,
       "market_cap": 336340000000.0,
@@ -289,9 +303,10 @@
       "beta": 0.39,
       "rsi": 49.96,
       "debt_eq": 0.68,
-      "profit_margin": 18.82
+      "profit_margin": 18.82,
+      "timestamp": "2026-05-24T12:50:33Z"
     },
-    "HD": {
+    {
       "ticker": "HD",
       "price": 376.06,
       "market_cap": 311830000000.0,
@@ -307,9 +322,10 @@
       "beta": 0.99,
       "rsi": 45.44,
       "debt_eq": 4.55,
-      "profit_margin": 8.41
+      "profit_margin": 8.41,
+      "timestamp": "2026-05-24T12:50:34Z"
     },
-    "BAC": {
+    {
       "ticker": "BAC",
       "price": 62.36,
       "market_cap": 367600000000.0,
@@ -325,9 +341,10 @@
       "beta": 1.21,
       "rsi": 52.67,
       "debt_eq": 2.49,
-      "profit_margin": 15.56
+      "profit_margin": 15.56,
+      "timestamp": "2026-05-24T12:50:35Z"
     },
-    "DIS": {
+    {
       "ticker": "DIS",
       "price": 132.76,
       "market_cap": 178860000000.0,
@@ -343,9 +360,10 @@
       "beta": 1.41,
       "rsi": 48.68,
       "debt_eq": 0.44,
-      "profit_margin": 11.53
+      "profit_margin": 11.53,
+      "timestamp": "2026-05-24T12:50:36Z"
     },
-    "CRM": {
+    {
       "ticker": "CRM",
       "price": 255.79,
       "market_cap": 147310000000.0,
@@ -361,7 +379,9 @@
       "beta": 1.14,
       "rsi": 50.82,
       "debt_eq": 0.3,
-      "profit_margin": 17.96
+      "profit_margin": 17.96,
+      "timestamp": "2026-05-24T12:50:37Z"
     }
-  }
+  ],
+  "timestamp": "2026-05-24T12:50:38Z"
 }

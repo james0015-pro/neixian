@@ -1,35 +1,33 @@
 {
-  "generated_at": "2026-05-23T17:57:25.915346+00:00",
-  "tickers_tracked": 20,
+  "generated_at": "2026-05-24T12:55:39Z",
+  "shift": 18,
   "sources": {
     "finviz": {
-      "status": "ok",
-      "holdings": 20,
-      "file": "institution_holdings.json",
-      "size_bytes": 6473
+      "status": "success",
+      "tickers": 20,
+      "file": "finviz_institutions.json"
     },
     "sec_edgar": {
-      "status": "ok",
-      "trades": 304,
-      "direct_insider": 304,
-      "cross_holdings": 0,
-      "buys": 97,
-      "sells": 207,
-      "filings_processed": 100,
-      "file": "insider_trades.json",
-      "size_bytes": 124105
+      "status": "success",
+      "trades": 360,
+      "buys": 119,
+      "sells": 241,
+      "tickers": 19,
+      "missing": [
+        "BAC"
+      ],
+      "file": "insider_trades.json"
     },
     "openinsider": {
-      "status": "ok",
-      "trades": 100,
-      "discovery": "Data in table[9] (not tbody[1]), 100 rows per page",
-      "file": "openinsider_trades.json",
-      "size_bytes": 28878
-    },
-    "camofox": {
-      "status": "skipped",
-      "reason": "libgtk-3.so.0 missing on headless server"
+      "status": "failed",
+      "trades": 0,
+      "error": "Network unreachable (OSError 101)",
+      "file": "openinsider_trades.json"
     }
   },
-  "total_data_files": 3
+  "frontend": {
+    "total_trades": 360,
+    "buys": 119,
+    "sells": 241
+  }
 }

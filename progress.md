@@ -23,6 +23,9 @@
 || 2026-05-23 21:05 | Night Shift 13: F017 Error boundaries + loading skeletons — ErrorBoundary class component (catches chunk load failures + runtime errors, Bloomberg error screen with RETRY/RELOAD), RouteLoadingSkeleton (animated amber bar), DataRowSkeleton + PanelSkeleton, per-route wrapping in App.tsx | ✅ Complete |
 || 2026-05-23 22:06 | Night Shift 14: Full data refresh — Finviz (20) + SEC EDGAR (239 trades, fixed rate-limit) + OpenInsider (100 trades, fixed column parser) + frontend sync (339 combined) + build verified ✅ | ✅ Complete |
 || 2026-05-24 06:30 | Night Shift 15: F018 Institution data enhancement — yfinance institutional_holders scraper (scripts/scrape_yfinance_institutions.py), 200 real holder records (10 per ticker × 20 tickers), real names (BlackRock, Vanguard, State Street, Berkshire, etc.), npm run build ✅ (1.55s), GitHub Pages deployed ✅ | ✅ Complete |
+|| 2026-05-24 10:40 | Night Shift 16: F019 Playwright E2E smoke tests — 8 tests (app render, ticker symbols, 5 route pages, nav buttons, crash check), all pass ✅ against production build, password gate bypassed via addInitScript, npm run test:e2e added, playwright.config.ts standardized | ✅ Complete |
+|| 2026-05-24 10:52 | Night Shift 17: Data refresh — Finviz 20/20 ✅ (fixed Short Float regex V2→V3, fixed resp.body.decode), SEC EDGAR 120 trades (44B/75S) ✅ (3.0s delay, zero 429s), OpenInsider ❌ (OSError 101 — server network unreachable). Scrapling /usr/bin/python3 workaround for venv missing pip | ✅ Complete |
+|| 2026-05-24 12:50 | Night Shift 18: Data refresh — Finviz 20/20 ✅ (latest prices: NVDA $296, TSLA $499, AAPL $313), SEC EDGAR 120 trades (44B/75S/1 conversion) across 19/20 tickers ✅ (BAC missing - all filings were cross-holdings NAN/NBH/PML), OpenInsider ❌ (OSError 101). Merged: 360 trades (119B/241S) in frontend. npm run build ✅ (1.83s). GitHub Pages deployed ✅. Key trades: XOM sold 16.6M PUMP shares @ $16.66 ($276M), AAPL Levinson sold 250K shares ($71M), NVDA Stevens sold 222K shares ($38.5M), META Olivan 5 sells + 4 derivative exercises, TSLA Wilson-Thompson 16 sells ($10.2M total). | ✅ Complete |
 
 ## Phase 0: Scaffold ✅
 - [x] Copy config files from WhaleTrace base
@@ -89,9 +92,9 @@
 
 ## Current State
 - **Live URL**: https://james0015-pro.github.io/neixian/
-- **Real data**: 239 SEC EDGAR Form 4 trades (89 buys, 150 sells) + 100 OpenInsider cross-company trades = 339 combined (106 buys, 233 sells)
+- **Real data**: 360 SEC EDGAR Form 4 trades (119 buys, 241 sells) + Finviz snapshots for all 20 tickers
 - **Institution holdings**: 200 real yfinance records — 10 top holders per ticker × 20 tickers (BlackRock, Vanguard, State Street, Berkshire, etc.)
-- **Coverage**: All 20 tracked tickers — 100% success rate scraping SEC and yfinance
+- **Coverage**: 19/20 tracked tickers from SEC (BAC missing — all recent Form 4 filings are cross-holding municipal fund trades NAN/NBH/PML)
 - **Quadrants**: Q1=Insider table, Q2=Detail panel + Chart + Timeline, Q3=Institution rankings (now with real holder names!), Q4=Summary stats
 - **Features**: Sortable columns, BUY/SELL filter, search, keyboard nav (1-4, ESC, /)
 - **Screener (F014)**: `/screener` route, DIR filter (ALL/BUY/SELL), ticker dropdown, SUMMARY/TRADES view modes, 9 sortable summary columns + 8 sortable trade columns, computed signal scores, TERM/SCRN nav toggle
